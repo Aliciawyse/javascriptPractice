@@ -1,3 +1,4 @@
+const inquirer = require('inquirer');
 
 var TwoFer = function () {};
 
@@ -8,23 +9,32 @@ TwoFer.prototype.twoFer = function (who) {
   // in some way. In this example, it is just
   // returned, but your solution will have to
   // use a conditional.
-
-
-
-
+    //
+    // var userName = grabName();
 
   return who;
 };
 
 
-const inquirer = require('inquirer');
+function grabName () {
 
-inquirer.prompt([{
-    name: 'name',
-    type: 'input',
-    message: 'What\'s your name?'
-}]).then((answers) => {
-    console.log(answers.name);
-});
+    //code that grabs a person's name
+
+    inquirer.prompt([{
+        name: 'name',
+        type: 'input',
+        message: 'What\'s your name?'
+    }])
+        .then((answers) => {
+            var response = answers.name;
+        })
+
+.then(function(){
+            return answer.name
+    });
+
+}
+
+grabName();
 
 module.exports = TwoFer;
